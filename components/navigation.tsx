@@ -1,7 +1,13 @@
 "use client"; // server side render
 
+import { useMedia } from "react-use"; 
 import { usePathname } from "next/navigation";
 import { NavButton } from "./nav-button";
+import {
+    Sheet,
+    SheetContent,
+    SheetTrigger,
+ } from "@/components/ui/sheet";
 
 const routes = [
     {
