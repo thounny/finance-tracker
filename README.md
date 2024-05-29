@@ -1,81 +1,90 @@
-Finance Platform
+# Finance Platform
+
 Welcome to my Finance Platform project! This platform is designed to help you manage your personal or business finances effectively. With this Finance SaaS Platform, you can track your income and expenses, categorize transactions, assign them to specific accounts, and import transactions using a CSV file. Additionally, it integrates with Plaid to connect to your bank account and uses Lemon Squeezy for monetization.
 
-Features
-Track Income and Expenses: Monitor your financial transactions with ease.
-Categorize Transactions: Organize your transactions by categories for better clarity.
-Account Management: Assign transactions to specific accounts.
-CSV Import: Import transactions from CSV files for quick data entry.
-Bank Integration: Connect to your bank account using Plaid.
-Monetization: Monetize your platform using Lemon Squeezy.
-Tech Stack
-Frontend: Next.js, React
-Backend: Hono.js
-CSV Upload: Integrated CSV upload functionality
-Database: PostgreSQL
-Bank Integration: Plaid
-Payment Processing: Lemon Squeezy
-Installation
-Clone the repository:
+## Features
 
-bash
-Copy code
-git clone https://github.com/thounny/finance-platform.git
-cd finance-platform
-Install dependencies:
+- **Track Income and Expenses:** Monitor your financial transactions with ease.
+- **Categorize Transactions:** Organize your transactions by categories for better clarity.
+- **Account Management:** Assign transactions to specific accounts.
+- **CSV Import:** Import transactions from CSV files for quick data entry.
+- **Bank Integration:** Connect to your bank account using Plaid.
+- **Monetization:** Monetize your platform using Lemon Squeezy.
 
-bash
-Copy code
+## Tech Stack
 
-# For backend
+- **Frontend:** Next.js, React
+- **Backend:** Hono.js
+- **CSV Upload:** Integrated CSV upload functionality
+- **Database:** PostgreSQL
+- **Bank Integration:** Plaid
+- **Payment Processing:** Lemon Squeezy
 
-cd backend
-npm install
+## Installation
 
-# For frontend
+1. **Clone the repository:**
 
-cd ../frontend
-npm install
-Set up environment variables:
+   ```bash
+   git clone https://github.com/thounny/finance-platform.git
+   cd finance-platform
+   ```
 
-Create a .env file in the root directory and add the following:
+2. **Install dependencies:**
 
-env
-Copy code
-PLAID_CLIENT_ID=your_plaid_client_id
-PLAID_SECRET=your_plaid_secret
-LEMON_SQUEEZY_API_KEY=your_lemon_squeezy_api_key
-DATABASE_URL=your_postgresql_database_url
-Run the application:
+   ```bash
+   # For backend
+   cd backend
+   npm install
 
-bash
-Copy code
+   # For frontend
+   cd ../frontend
+   npm install
+   ```
 
-# For backend
+3. **Set up environment variables:**
 
-cd backend
-npm start
+   Create a `.env` file in the root directory and add the following:
 
-# For frontend
+   ```env
+   PLAID_CLIENT_ID=your_plaid_client_id
+   PLAID_SECRET=your_plaid_secret
+   LEMON_SQUEEZY_API_KEY=your_lemon_squeezy_api_key
+   DATABASE_URL=your_postgresql_database_url
+   ```
 
-cd ../frontend
-npm start
-Usage
-Track Income and Expenses:
+4. **Run the application:**
 
-Add your income and expense transactions manually or import them from a CSV file.
-Categorize Transactions:
+   ```bash
+   # For backend
+   cd backend
+   npm start
 
-Assign categories to your transactions for better organization.
-Account Management:
+   # For frontend
+   cd ../frontend
+   npm start
+   ```
 
-Create and manage different accounts, assigning transactions to the appropriate accounts.
-CSV Import:
+## Usage
 
-Import transactions using a CSV file by navigating to the import section and uploading your file.
-Bank Integration:
+1. **Track Income and Expenses:**
 
-Connect your bank account using Plaid to automatically import and sync transactions.
-Monetization:
+   - Add your income and expense transactions manually or import them from a CSV file.
 
-Monetize your platform by integrating Lemon Squeezy for payment processing.
+2. **Categorize Transactions:**
+
+   - Assign categories to your transactions for better organization.
+
+3. **Account Management:**
+
+   - Create and manage different accounts, assigning transactions to the appropriate accounts.
+
+4. **CSV Import:**
+
+   - Import transactions using a CSV file by navigating to the import section and uploading your file.
+
+5. **Bank Integration:**
+
+   - Connect your bank account using Plaid to automatically import and sync transactions.
+
+6. **Monetization:**
+   - Monetize your platform by integrating Lemon Squeezy for payment processing.
