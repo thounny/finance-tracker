@@ -25,7 +25,7 @@ Welcome to my Finance Platform project! This platform is designed to help you ma
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/thounny/finance-platform.git
+   git clone https://github.com/thounny/finance-tracker.git
    cd finance-platform
    ```
 
