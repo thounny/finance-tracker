@@ -1,6 +1,5 @@
 "use client";
 
-import { placeholder } from "drizzle-orm";
 import { useMemo } from "react";
 import { SingleValue } from "react-select";
 import CreateTableSelect from "react-select/creatable";
