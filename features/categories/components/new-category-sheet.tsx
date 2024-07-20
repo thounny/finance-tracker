@@ -12,43 +12,42 @@ import {
 } from "@/components/ui/sheet";
 
 const formSchema = insertCategorySchema.pick({
-    name: true,
+  name: true,
 });
 
-type FormValues = z.input<typeof formSchema>;
+type FormValues = z.infer<typeof formSchema>;
 
 export const NewCategorySheet = () => {
-    const { isOpen, onClose } = useNewCategory();
+  const { isOpen, onClose } = useNewCategory();
+  const mutation = useCreateCategory();
 
-    const mutation = useCreateCategory();
+  const onSubmit = (values: FormValues) => {
+    mutation.mutate(values, {
+      onSuccess: () => {
+        onClose();
+      },
+    });
+  };
 
-    const onSubmit = (values: FormValues) => {
-        mutation.mutate(values, {
-            onSuccess: () => {
-                onClose();
-            },
-        });
-    };
+  return (
+    <Sheet open={isOpen || mutation.isPending} onOpenChange={onClose}>
+      <SheetContent className="space-y-4">
+        <SheetHeader>
+          <SheetTitle>New Category</SheetTitle>
 
-    return (
-        <Sheet open={isOpen} onOpenChange={onClose}>
-            <SheetContent className="space-y-4">
-                <SheetHeader>
-                    <SheetTitle>
-                        New Category
-                    </SheetTitle>
-                    <SheetDescription>
-                        Create a new category to organize your transactions.
-                    </SheetDescription>
-                </SheetHeader>
-                <CategoryForm
-                    onSubmit={onSubmit} 
-                    disabled={mutation.isPending}
-                    defaultValues={{
-                        name: "",
-                    }}
-                />
-            </SheetContent>
-        </Sheet>
-    );
+          <SheetDescription>
+            Create a new category to organize your transactions.
+          </SheetDescription>
+        </SheetHeader>
+
+        <CategoryForm
+          defaultValues={{
+            name: "",
+          }}
+          onSubmit={onSubmit}
+          disabled={mutation.isPending}
+        />
+      </SheetContent>
+    </Sheet>
+  );
 };
