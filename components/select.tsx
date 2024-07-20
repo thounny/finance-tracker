@@ -50,7 +50,6 @@ export const Select = ({
             options={options}
             onCreateOption={onCreate}
             isDisabled={disabled}
-
         />
     );
 };
