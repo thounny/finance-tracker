@@ -54,10 +54,10 @@ const AccountsPage = () => {
             filterKey="name"
             columns={columns}
             data={accounts}
-            onDelete={(row) => {
-              const ids = row.map((r) => r.original.id);
-
-              deleteAccounts.mutate({ ids });
+            onDelete={(rows) => {
+              const ids = rows.map((row) => row.original.id);
+              // Ensure deleteAccounts.mutate() receives the correct structure
+              deleteAccounts.mutate({ json: { ids } });
             }}
             disabled={isDisabled}
           />
