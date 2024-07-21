@@ -35,7 +35,7 @@ export const Header = () => {
               rel="noreferrer noopener"
               title="Source Code"
             >
-              <Image src="./github.svg" alt="GitHub" height={24} width={24} />
+              <Image src="/github.svg" alt="GitHub" height={24} width={24} />
             </Link>
           </div>
         </div>
